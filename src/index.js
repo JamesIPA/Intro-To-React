@@ -1,3 +1,4 @@
+import API_KEY from './api_key'
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar';
