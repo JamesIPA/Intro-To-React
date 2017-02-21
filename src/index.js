@@ -12,20 +12,30 @@ class App extends Component{
     constructor(props){
         super(props);
 
-        this.state = { videos: [] };
+        this.state = {
+            videos: [],
+            selectedVideo: null
+         };
 
         YTSearch({key: API_KEY, term:'surfboards'}, (videos) => {
-            //When the key and the variable name are the same we can just pass in the name instead of {name: name}
-            this.setState({videos})
+
+            this.setState({
+                videos: videos,
+                //initialise the selected video as the top search result to ensure VideoDetail rerenders
+                selectedVideo: videos[0]
+            })
+
         });
     }
 
-    render(){
+    render() {
         return (
             <div>
                 <SearchBar />
-                <VideoDetail video={this.state.videos[0]}/>
-                <VideoList videos={this.state.videos} />
+                <VideoDetail video={this.state.selectedVideo}/>
+                <VideoList
+                    onVideoSelect={selectedVideo => this.setState({selectedVideo})}
+                    videos={this.state.videos} />
             </div>
         );
     }
