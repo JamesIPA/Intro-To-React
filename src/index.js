@@ -18,13 +18,11 @@ class App extends Component{
          };
 
         YTSearch({key: API_KEY, term:'surfboards'}, (videos) => {
-
             this.setState({
                 videos: videos,
                 //initialise the selected video as the top search result to ensure VideoDetail rerenders
                 selectedVideo: videos[0]
             })
-
         });
     }
 
@@ -32,10 +30,11 @@ class App extends Component{
         return (
             <div>
                 <SearchBar />
-                <VideoDetail video={this.state.selectedVideo}/>
+                <VideoDetail video={this.state.selectedVideo} />
                 <VideoList
                     onVideoSelect={selectedVideo => this.setState({selectedVideo})}
-                    videos={this.state.videos} />
+                    videos={this.state.videos}
+                />
             </div>
         );
     }
