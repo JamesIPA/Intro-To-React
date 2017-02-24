@@ -2,13 +2,13 @@
 This repo contains the code created while following [Steven Grider's Modern React With Redux](https://www.udemy.com/react-redux/) course on Udemy.
 
 ##Topics Covered
--Components
--State
--ES6
--Ajax requests using Youtube's search API
--Jsx
--Basic styling using CSS classes and [bootstrap](http://getbootstrap.com/)
--Basic node.js and npm use
+- Components
+- State
+- ES6
+- Ajax requests using Youtube's search API
+- Jsx
+- Basic styling using CSS classes and [bootstrap](http://getbootstrap.com/)
+- Basic node.js and npm use
 
 ##Installing and running
 1. Clone repo.
